@@ -5,6 +5,7 @@
  */
 package master;
 
+import icon.tableCustom;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,6 +31,7 @@ DefaultTableModel table = new DefaultTableModel();
      */
     public table_dokter() {
         initComponents();
+            icon.tableCustom.apply(jScrollPane1, tableCustom.TableType.DEFAULT);
          koneksi conn = new koneksi();
         koneksi.getKoneksi();
         
@@ -103,7 +105,6 @@ if (selectedRow >= 0) {
     // Setel nilai-nilai dalam JTextField di data_dokter
     editForm.nip.setText(nip);
     editForm.nama_dokter.setText(namaDokter);
-
     // Setel nilai pada JComboBox "spesialis"
     editForm.spesialis.setSelectedItem(spesialis);
 
@@ -111,7 +112,6 @@ if (selectedRow >= 0) {
     editForm.alamat.setText(alamat);
 
     // Setel nilai pada JDateTimePicker "jadwal"
- ;
     
     editForm.setVisible(true);
 } else {
@@ -136,6 +136,9 @@ if (selectedRow >= 0) {
         btn_hapus = new javax.swing.JButton();
         btn_print = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        txt_search = new javax.swing.JTextField();
+        btn_cari = new javax.swing.JButton();
+        btn_cancel = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -143,7 +146,7 @@ if (selectedRow >= 0) {
 
         btn_edit.setBackground(new java.awt.Color(255, 255, 255));
         btn_edit.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        btn_edit.setText(".\n");
+        btn_edit.setText(". ");
         btn_edit.setBorderPainted(false);
         btn_edit.setContentAreaFilled(false);
         btn_edit.addActionListener(new java.awt.event.ActionListener() {
@@ -214,6 +217,24 @@ if (selectedRow >= 0) {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 70, 60));
 
+        txt_search.setBorder(null);
+        getContentPane().add(txt_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 390, 40));
+
+        btn_cari.setText(".");
+        btn_cari.setBorderPainted(false);
+        btn_cari.setContentAreaFilled(false);
+        btn_cari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cariActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_cari, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 60, 50));
+
+        btn_cancel.setText(".");
+        btn_cancel.setBorderPainted(false);
+        btn_cancel.setContentAreaFilled(false);
+        getContentPane().add(btn_cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 60, 50));
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\COMPUTER\\Downloads\\Data Dokter1.png")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
@@ -226,9 +247,7 @@ if (selectedRow >= 0) {
 
     private void btn_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editActionPerformed
         // TODO add your handling code here:
-           master.data_dokter h = new master.data_dokter();
-        h.setVisible(true);
-        this.dispose();
+  editData();
     }//GEN-LAST:event_btn_editActionPerformed
 
     private void btn_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tambahActionPerformed
@@ -264,6 +283,11 @@ if (selectedRow >= 0) {
         h.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btn_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cariActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_cariActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,6 +325,8 @@ if (selectedRow >= 0) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cancel;
+    private javax.swing.JButton btn_cari;
     private javax.swing.JButton btn_edit;
     private javax.swing.JButton btn_hapus;
     private javax.swing.JButton btn_print;
@@ -309,5 +335,6 @@ if (selectedRow >= 0) {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_dokter;
+    private javax.swing.JTextField txt_search;
     // End of variables declaration//GEN-END:variables
 }

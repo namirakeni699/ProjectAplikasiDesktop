@@ -50,10 +50,8 @@ public class data_dokter extends javax.swing.JFrame {
         initComponents();
      
         Locale indonesiaLocale = new Locale("in", "ID"); // Buat objek Locale untuk bahasa Indonesia
-              Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        // Mengatur ukuran form sesuai dengan ukuran layar
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setSize(screenSize.width, screenSize.height);
-        // Mengatur posisi form di koordinat (0,0) untuk memastikan form berada di pojok kiri atas
         setLocation(0, 0);
       
 
@@ -184,7 +182,6 @@ private void editData() {
         btn_tambah = new javax.swing.JButton();
         btn_edit = new javax.swing.JButton();
         jadwal = new uz.ncipro.calendar.JDateTimePicker();
-        btn_hapus = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -197,7 +194,7 @@ private void editData() {
 
         nama_dokter.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         nama_dokter.setBorder(null);
-        getContentPane().add(nama_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 390, 47));
+        getContentPane().add(nama_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 390, 47));
 
         alamat.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         alamat.setBorder(null);
@@ -210,7 +207,7 @@ private void editData() {
 
         nip.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         nip.setBorder(null);
-        getContentPane().add(nip, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 400, 47));
+        getContentPane().add(nip, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 400, 47));
 
         nohp.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         nohp.setBorder(null);
@@ -224,7 +221,7 @@ private void editData() {
                 btn_tambahActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, 150, 50));
+        getContentPane().add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 550, 150, 50));
 
         btn_edit.setText(".");
         btn_edit.setBorderPainted(false);
@@ -234,7 +231,7 @@ private void editData() {
                 btn_editActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 150, 50));
+        getContentPane().add(btn_edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 550, 150, 50));
 
         jadwal.setBorder(null);
         jadwal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4/11/2023" }));
@@ -242,25 +239,17 @@ private void editData() {
         jadwal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         getContentPane().add(jadwal, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 420, 400, 50));
 
-        btn_hapus.setText(".");
-        btn_hapus.setBorderPainted(false);
-        btn_hapus.setContentAreaFilled(false);
-        btn_hapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_hapusActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 420, 150, 50));
-
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Back");
+        jButton1.setText(".\n");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 60, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\COMPUTER\\Downloads\\dataDokter (1).png")); // NOI18N
         jLabel1.setText("\n");
@@ -283,13 +272,9 @@ private void editData() {
         // TODO add your handling code here:
     }//GEN-LAST:event_alamatActionPerformed
 
-    private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_hapusActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-          master.menu_utama h = new menu_utama();
+          master.table_dokter h = new table_dokter();
         h.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -332,7 +317,6 @@ private void editData() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JTextField alamat;
     private javax.swing.JButton btn_edit;
-    private javax.swing.JButton btn_hapus;
     private javax.swing.JButton btn_tambah;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

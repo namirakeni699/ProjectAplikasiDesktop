@@ -125,7 +125,7 @@ public class menu_utama extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        master.data_dokter h = new data_dokter();
+        master.table_dokter h = new table_dokter();
         h.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
