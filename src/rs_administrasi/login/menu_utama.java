@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package master;
+package rs_administrasi.login;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -111,23 +111,16 @@ public class menu_utama extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        master.data_pasien h = new data_pasien();
-        h.setVisible(true);
-        this.setVisible(false);
+  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        master.table_pasien h = new table_pasien();
-        h.setVisible(true);
-        this.setVisible(false);
+ 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        master.table_dokter h = new table_dokter();
-        h.setVisible(true);
-        this.setVisible(false);
+   
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

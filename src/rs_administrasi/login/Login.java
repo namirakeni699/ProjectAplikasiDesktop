@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import koneksi.Parameter;
 import koneksi.ceklogin;
-import master.menu_utama;
+import rs_administrasi.login.menu_utama;
 /**
  *
  * @author COMPUTER
@@ -25,7 +25,7 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-       ResultSet st;
+    ResultSet st;
     ceklogin db;
     String username, password;
     public Login() {
@@ -51,7 +51,7 @@ public class Login extends javax.swing.JFrame {
                 while (st.next()) {
                     username = st.getString("username");
                     password = st.getString("password");
-                     master.menu_utama h = new menu_utama();
+                     rs_administrasi.login.menu_utama h = new menu_utama();
                     h.setVisible(true);
                     this.dispose();
                 
@@ -68,14 +68,6 @@ public class Login extends javax.swing.JFrame {
             }
         }
     
-
-    public void getJam() {
-        Date skrg = new Date();
-        SimpleDateFormat tgl = new SimpleDateFormat("EEEE-dd-MMM-yyyy");
-        SimpleDateFormat jam = new SimpleDateFormat("HH:mm");
-        
-        
-    }
 
     public void getUsername() {
         if (txt_username.getForeground().equals(Color.LIGHT_GRAY)) {
